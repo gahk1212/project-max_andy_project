@@ -32,39 +32,66 @@ public class Currencies {
         return krw;
     }
 
-    public double eurToUsd(double eur) {
+    public double eurToUsd(double eur) throws IOException {
+        URL url = new URL("https://www.oanda.com/currency-converter/en/?from=EUR&to=USD&amount=1");
+        URLConnection con = url.openConnection();
+        InputStream is = con.getInputStream();
         return usd;
     }
 
-    public double eurToCny(double eur) {
+    public double eurToCny(double eur) throws IOException {
+        URL url = new URL("https://www.oanda.com/currency-converter/en/?from=EUR&to=CNY&amount=1");
+        URLConnection con = url.openConnection();
+        InputStream is = con.getInputStream();
         return cny;
     }
 
-    public double eurToKrw(double eur) {
+    public double eurToKrw(double eur) throws IOException {
+        URL url = new URL("https://www.oanda.com/currency-converter/en/?from=EUR&to=KRW&amount=1");
+        URLConnection con = url.openConnection();
+        InputStream is = con.getInputStream();
         return krw;
     }
 
-    public double cnyToUsd(double cny) {
+    public double cnyToUsd(double cny) throws IOException {
+        URL url = new URL("https://www.oanda.com/currency-converter/en/?from=CNY&to=USD&amount=1");
+        URLConnection con = url.openConnection();
+        InputStream is = con.getInputStream();
         return usd;
     }
 
-    public double cnyToEur(double cny) {
+    public double cnyToEur(double cny) throws IOException {
+        URL url = new URL("https://www.oanda.com/currency-converter/en/?from=CNY&to=EUR&amount=1");
+        URLConnection con = url.openConnection();
+        InputStream is = con.getInputStream();
         return eur;
     }
 
-    public double cnyToKrw(double cny) {
+    public double cnyToKrw(double cny) throws IOException {
+        URL url = new URL("https://www.oanda.com/currency-converter/en/?from=CNY&to=KRW&amount=1");
+        URLConnection con = url.openConnection();
+        InputStream is = con.getInputStream();
         return krw;    
     }
 
-    public double krwToUsd(double krw) {
+    public double krwToUsd(double krw) throws IOException {
+        URL url = new URL("https://www.oanda.com/currency-converter/en/?from=KRW&to=USD&amount=1");
+        URLConnection con = url.openConnection();
+        InputStream is = con.getInputStream();
         return krw;
     }
 
-    public double krwToEur(double krw) {
+    public double krwToEur(double krw) throws IOException {
+        URL url = new URL("https://www.oanda.com/currency-converter/en/?from=KRW&to=EUR&amount=1");
+        URLConnection con = url.openConnection();
+        InputStream is = con.getInputStream();
         return eur;
     }
 
-    public double krwToCny(double krw) {
+    public double krwToCny(double krw) throws IOException {
+        URL url = new URL("https://www.oanda.com/currency-converter/en/?from=KRW&to=CNY&amount=1");
+        URLConnection con = url.openConnection();
+        InputStream is = con.getInputStream();
         return cny;
     }
 }
