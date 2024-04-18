@@ -5,7 +5,7 @@ import java.awt.Color;
 
 public class CurrencyExchanger {
 
-    private static Color beige = new Color(245, 245, 220);
+    private static Color beige = new Color(240, 240, 225);
     
     public static void main(String[] args) {
         JFrame frame = new JFrame("Currency Exchanger");
