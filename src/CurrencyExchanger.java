@@ -13,5 +13,6 @@ public class CurrencyExchanger {
         frame.setSize(900, 900);
         frame.setBackground(beige);
         frame.setVisible(true);
+        
     }
 }

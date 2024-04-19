@@ -7,10 +7,8 @@ import java.io.InputStream;
 
 public class Currencies {
 
-    public double usd;
-    public double eur;
-    public double cny;
-    public double krw;
+    public String firstCurr;
+    public String secCurr;
     public String userUrl;
 
 
@@ -30,11 +28,11 @@ public class Currencies {
         this.userUrl = userUrl;
     }
 
-    public double firstToSecond(double usd) throws IOException {
+    public String firstToSecond(String firstCurr) throws IOException {
         URL url = new URL(userUrl);
         URLConnection con = url.openConnection();
         InputStream is = con.getInputStream();
-        return eur;
+        return secCurr;
     }
 
     // public double usdToCny(double usd) throws IOException {
