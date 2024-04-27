@@ -1,39 +1,59 @@
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.Scanner;
-import java.io.IOException;
-import java.io.InputStream;
+// import java.net.URL;
+// import java.net.URLConnection;
+// import java.util.Scanner;
+// import java.io.IOException;
+// import java.io.InputStream;
 
 
-public class Currencies {
+// public class Currencies {
 
-    public String firstCurr;
-    public String secCurr;
-    public String userUrl;
+//     public String firstCurr;
+//     public String secCurr;
+//     public String userUrl;
 
 
-    public void userCurrInput() {
-        Scanner input1 = new Scanner(System.in);
-        System.out.println("Enter currency you're exchanging from (valid 3 char format)");
-        String firstCurr = input1.next();
-        input1.close();
+//     public void userCurrInput() {
+//         Scanner input1 = new Scanner(System.in);
+//         System.out.println("Enter currency you're exchanging from (valid 3 char format)");
+//         String firstCurr = input1.next();
+//         input1.close();
 
-        Scanner input2 = new Scanner(System.in);
-        System.out.println("Enter currency you're exchanging to (valid 3 char format)");
-        String secCurr = input2.next();
-        input2.close();
+//         Scanner input2 = new Scanner(System.in);
+//         System.out.println("Enter currency you're exchanging to (valid 3 char format)");
+//         String secCurr = input2.next();
+//         input2.close();
 
-        String userUrl = "https://www.oanda.com/currency-converter/en/?from=" + firstCurr + "&to=" + secCurr + "&amount=1";
+//         String userUrl = "https://www.oanda.com/currency-converter/en/?from=" + firstCurr + "&to=" + secCurr + "&amount=1";
 
-        this.userUrl = userUrl;
-    }
+//         this.userUrl = userUrl;
+//     }
 
-    public String firstToSecond(String firstCurr) throws IOException {
-        URL url = new URL(userUrl);
-        URLConnection con = url.openConnection();
-        InputStream is = con.getInputStream();
-        return secCurr;
-    }
+//     public String firstToSecond(String firstCurr) throws IOException {
+//         URL url = new URL(userUrl);
+//         URLConnection con = url.openConnection();
+//         InputStream is = con.getInputStream();
+//         return secCurr;
+//     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // public double usdToCny(double usd) throws IOException {
     //     URL url = new URL("https://www.oanda.com/currency-converter/en/?from=USD&to=CNY&amount=1");
@@ -111,4 +131,4 @@ public class Currencies {
     //     InputStream is = con.getInputStream();
     //     return cny;
     // }
-}
+// }
