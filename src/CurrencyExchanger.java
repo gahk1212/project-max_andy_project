@@ -117,6 +117,7 @@ public class CurrencyExchanger {
     static GraphicsText sgd;
     static GraphicsText usd;
     private static Button button1;
+    private static Button button2;
     static TextField textField1;
     static TextField textField2;
     static TextField textField3;
@@ -159,8 +160,12 @@ public class CurrencyExchanger {
     canvas1.add(textField4);
 
     button1 = new Button("Available Currencies");
-    button1.setPosition(450,750);
+    button1.setPosition(425,750);
     canvas1.add(button1);
+
+    button2 = new Button("Exchange");
+    button2.setPosition(450, 600);
+    canvas1.add(button2);
 
 
     button1.onClick(()-> {
