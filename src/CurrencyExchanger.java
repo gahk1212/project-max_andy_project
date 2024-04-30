@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.GradientPaint;
+import java.util.Scanner;
 
 import edu.macalester.graphics.*;
 // import org.jsoup.*;
@@ -55,6 +56,7 @@ public class CurrencyExchanger {
     textField1 = new TextField();
     textField1.setPosition(CANVAS_WIDTH*0.3, 400);
     canvas1.add(textField1);
+    Scanner scanner = new Scanner(System.in);
     
     textFrom = new GraphicsText("Currency from (valid three-letter code)", CANVAS_WIDTH*0.6, 390);
     canvas1.add(textFrom);
