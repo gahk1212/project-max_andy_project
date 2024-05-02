@@ -3,8 +3,6 @@ import java.awt.GradientPaint;
 import java.util.Scanner;
 
 import edu.macalester.graphics.*;
-// import org.jsoup.*;
-// import javax.swing.*;
 import edu.macalester.graphics.ui.Button;
 import edu.macalester.graphics.ui.TextField;
 
@@ -38,6 +36,8 @@ public class CurrencyExchanger {
     static TextField textField2;
     static TextField textField3;
     static TextField textField4;
+    static double currAmount;
+    static String currFrom, currTo;
     static Color beige = new Color(240, 240, 225);
 
 
@@ -55,15 +55,15 @@ public class CurrencyExchanger {
     canvas1.add(textAmount);
     textField1 = new TextField();
     textField1.setPosition(CANVAS_WIDTH*0.3, 400);
-    double currAmount = Double.parseDouble(textField1.getText());
     canvas1.add(textField1);
+    currAmount = Double.parseDouble(textField1.getText());
     
     textFrom = new GraphicsText("Currency from (valid three-letter code)", CANVAS_WIDTH*0.6, 390);
     canvas1.add(textFrom);
     textField2 = new TextField();
     textField2.setPosition(CANVAS_WIDTH*0.6, 400);
-    String currFrom = textField2.getText();
     canvas1.add(textField2);
+    currFrom = textField2.getText();
 
     textResult = new GraphicsText("Converted Amount", CANVAS_WIDTH*0.3, 490);
     canvas1.add(textResult);
@@ -74,9 +74,9 @@ public class CurrencyExchanger {
     textTo = new GraphicsText("Currency to (valid three-letter code)", CANVAS_WIDTH*0.6, 490);
     canvas1.add(textTo);
     textField4 = new TextField();
-    textField4.setPosition(CANVAS_WIDTH*0.3, 500);
-    String currTo = textField4.getText();
+    textField4.setPosition(CANVAS_WIDTH*0.3, 500);   
     canvas1.add(textField4);
+    currTo = textField4.getText();
 
     button1 = new Button("Available Currencies");
     button1.setPosition(425,750);
