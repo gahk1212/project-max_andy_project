@@ -7,29 +7,27 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class JavaExchanger {
+    private static double usd = 1.0000;
+    // Europe Euro
+    private static double eur;
+    // Singapore Dollar
+    private static double sgd;
+    // Japanese Yen
+    private static double jpy;
+    // Chinese Yuan Renminbi
+    private static double cny;
+    // Indian Rupee
+    private static double inr;
+    // Mexican Peso
+    private static double mxn;
+    // Canadian Dollar
+    private static double cad;
+    // Russian Ruble
+    private static double rub;
+    // Australian Dollar
+    private static double aud;
 
-    public static double usdToUsd = 1.0000;
-            // Europe Euro
-    public static double usdToEur;
-            // Singapore Dollar
-    public static double usdToSgd;
-            // Japanese Yen
-    public static double usdToJpy;
-            // Chinese Yuan Renminbi
-    public static double usdToCny;
-            // Indian Rupee
-    public static double usdToInr;
-            // Mexican Peso
-    public static double usdToMxn;
-            // Canadian Dollar
-    public static double usdToCad;
-            // Russian Ruble
-    public static double usdToRub;
-            // Australian Dollar
-    public static double usdToAud;
-        public static double exchangeRate;
-
-    public double JavaExchanger() {
+    public JavaExchanger() {
         String url = "https://www.x-rates.com/table/?from=USD&amount=1";
         ArrayList<String> exRates = new ArrayList<String>();
 
@@ -41,49 +39,56 @@ public class JavaExchanger {
                 String exchangeRate = cells.get(0).text(); // Assuming exchange rate is in the second <td> element
                 exRates.add(exchangeRate);
             }
-            
-            // System.out.println(exRates);
 
             // United States Dollar
-            usdToUsd = 1.0000;
+            usd = 1.0000;
             // Europe Euro
-            usdToEur = Double.parseDouble(exRates.get(13));
+            eur = Double.parseDouble(exRates.get(13));
             // Singapore Dollar
-            usdToSgd = Double.parseDouble(exRates.get(40));
+            sgd = Double.parseDouble(exRates.get(40));
             // Japanese Yen
-            usdToJpy = Double.parseDouble(exRates.get(21));
+            jpy = Double.parseDouble(exRates.get(21));
             // Chinese Yuan Renminbi
-            usdToCny = Double.parseDouble(exRates.get(9));
+            cny = Double.parseDouble(exRates.get(9));
             // Indian Rupee
-            usdToInr = Double.parseDouble(exRates.get(17));
+            inr = Double.parseDouble(exRates.get(17));
             // Mexican Peso
-            usdToMxn = Double.parseDouble(exRates.get(28));
+            mxn = Double.parseDouble(exRates.get(28));
             // Canadian Dollar
-            usdToCad = Double.parseDouble(exRates.get(7));
+            cad = Double.parseDouble(exRates.get(7));
             // Russian Ruble
-            usdToRub = Double.parseDouble(exRates.get(38));
+            rub = Double.parseDouble(exRates.get(38));
             // Australian Dollar
-            usdToAud = Double.parseDouble(exRates.get(1));
+            aud = Double.parseDouble(exRates.get(1));
+            }
 
-
-
+            catch (IOException e) {e.printStackTrace();}
         }
-
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-        return JavaExchanger.exchangeRate;
-
-        // public static double returnRate(exchangeRate) {
-        //         return this.exchangeRate;
-        // }
         
-
-    }
-
-    public static double returnRate(double currFrom) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'returnRate'");
-    }
-
+        public static Double returnRate(String currencyCode) {
+            switch (currencyCode) {
+                case "USD":
+                    return usd;
+                case "EUR":
+                    return eur;
+                case "SGD":
+                    return sgd;
+                case "JPY":
+                    return jpy;
+                case "CNY":
+                    return cny;
+                case "INR":
+                    return inr;
+                case "MXN":
+                    return mxn;
+                case "CAD":
+                    return cad;
+                case "RUB":
+                    return rub;
+                case "AUD":
+                    return aud;
+                default:
+                    return null;
+            }
+        }
 }
