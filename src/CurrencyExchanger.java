@@ -55,13 +55,14 @@ public class CurrencyExchanger {
     canvas1.add(textAmount);
     textField1 = new TextField();
     textField1.setPosition(CANVAS_WIDTH*0.3, 400);
+    double currAmount = Double.parseDouble(textField1.getText());
     canvas1.add(textField1);
-    Scanner scanner = new Scanner(System.in);
     
     textFrom = new GraphicsText("Currency from (valid three-letter code)", CANVAS_WIDTH*0.6, 390);
     canvas1.add(textFrom);
     textField2 = new TextField();
     textField2.setPosition(CANVAS_WIDTH*0.6, 400);
+    String currFrom = textField2.getText();
     canvas1.add(textField2);
 
     textResult = new GraphicsText("Converted Amount", CANVAS_WIDTH*0.3, 490);
@@ -74,6 +75,7 @@ public class CurrencyExchanger {
     canvas1.add(textTo);
     textField4 = new TextField();
     textField4.setPosition(CANVAS_WIDTH*0.3, 500);
+    String currTo = textField4.getText();
     canvas1.add(textField4);
 
     button1 = new Button("Available Currencies");

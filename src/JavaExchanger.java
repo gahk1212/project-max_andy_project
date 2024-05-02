@@ -27,8 +27,9 @@ public class JavaExchanger {
     public static double usdToRub;
             // Australian Dollar
     public static double usdToAud;
+        public static double exchangeRate;
 
-    public JavaExchanger() {
+    public double JavaExchanger() {
         String url = "https://www.x-rates.com/table/?from=USD&amount=1";
         ArrayList<String> exRates = new ArrayList<String>();
 
@@ -71,11 +72,18 @@ public class JavaExchanger {
         catch (IOException e) {
             e.printStackTrace();
         }
+        return JavaExchanger.exchangeRate;
 
-        // public static returnRate (double exchangeRate) {
-        //     return exchangeRate
+        // public static double returnRate(exchangeRate) {
+        //         return this.exchangeRate;
         // }
         
 
     }
+
+    public static double returnRate(double currFrom) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'returnRate'");
+    }
+
 }
